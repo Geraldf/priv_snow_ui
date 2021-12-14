@@ -17,15 +17,13 @@ const optFunc = function (options, params, ctx) {
     params.request.header.authorization = auth;
   }
   return {
-    target: "https://karlstorz.service-now.com",
+    target: process.env.PROXY_TO,
     changeOrigin: true,
     logs: true,
   };
 };
 app.use(cors());
-
-  proxy("/", optFunc)
-);
+app.use(proxy("/", optFunc));
 
 app.listen(port);
 console.log(`listening on port ${port}`);
