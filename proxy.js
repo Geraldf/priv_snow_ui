@@ -23,13 +23,7 @@ const optFunc = function (options, params, ctx) {
   };
 };
 app.use(cors());
-//app.use(auth({ name: "CPIC_Rest_Automation", pass: "G1cbis6KgDu2" }));
-app.use(
-  //   proxy("/", {
-  //     target: "https://karlstorz.service-now.com",
-  //     changeOrigin: true,
-  //     logs: true,
-  //   })
+
   proxy("/", optFunc)
 );
 
