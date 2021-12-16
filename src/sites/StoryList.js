@@ -8,8 +8,6 @@ import { makeStyles } from "@mui/styles";
 import ReadSNOW from "../tools/sn_Request";
 
 const useStyles = makeStyles((theme) => ({
-  //const useStyles = (theme) => ({
-
   alertPaper: {
     width: 200,
   },
@@ -20,49 +18,6 @@ export default function StoryList() {
   const [Loading, setLoading] = useState(false);
   const [Data, setData] = useState([]);
   const classes = useStyles();
-
-  // const ReadSNOW = async (url) => {
-  //   setError(null);
-  //   setLoading(true);
-  //   const headers = {
-  //     "Content-Type": "application/json",
-  //     Accept: "application/json",
-  //   };
-
-  //   const requestOptions = {
-  //     // url: "https://karlstorz.service-now.com/api/now/table/rm_story?sysparm_query=sys_class_name%3Drm_story%5Eassignment_group%3Dfb1464bd1b24a010b43654292d4bcb16%5Erelease%3D09efcea2dbb338109392edc4059619d7&sysparm_first_row=1&sysparm_view=scrum&sysparm_choice_query_raw=&sysparm_list_header_search=true",
-  //     // url: "http://localhost:3001/api/now/table/rm_story?sysparm_query=sys_class_name%3Drm_story%5Eassignment_group%3Dfb1464bd1b24a010b43654292d4bcb16%5Erelease%3D09efcea2dbb338109392edc4059619d7&sysparm_first_row=1&sysparm_view=scrum&sysparm_choice_query_raw=&sysparm_list_header_search=true&&sysparm_fields=number,description,short_description",
-  //     //url: "http://localhost:3001/api/now/table/rm_story?sysparm_query=sys_id%3D02711b311b008510eac7bb739b4bcb60",
-  //     url: url,
-  //     headers: headers,
-  //     // auth: {
-  //     //   username: process.env.REACT_APP_SNUSER,
-  //     //   password: process.env.REACT_APP_SNPW,
-  //     // },
-
-  //     //data: JSON.stringify(qrValue),
-  //     data: {},
-  //   };
-
-  //   const result = await axios(requestOptions)
-  //     .then((data) => {
-  //       setError(null);
-  //       setData(data.data.result);
-  //     })
-  //     .catch(function (error) {
-  //       // catch
-  //       var err;
-  //       // if (error.response !== "undefined") {
-  //       //   err = `${error.message} -- ${error.response.data.message}`;
-  //       // } else {
-  //       //   err = `${error.message} `;
-  //       //}
-  //       setError(error);
-  //     })
-  //     .finally(() => {
-  //       setLoading(false);
-  //     });
-  // };
 
   const getItems = (url) => {
     if (url === undefined) {
