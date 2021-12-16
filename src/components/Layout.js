@@ -16,7 +16,6 @@ import SubjectOutlined from "@mui/icons-material/SubjectOutlined";
 import AddCircleOutlineOutlined from "@mui/icons-material/AddCircleOutlineOutlined";
 
 const drawerWidth = 240;
-const drawerMarginTop = 16;
 
 const useStyles = makeStyles((theme) => ({
   //const useStyles = (theme) => ({
@@ -96,7 +95,8 @@ export default function Layout({ children }) {
                 key={item.text}
                 onClick={() => navigate(item.path)}
                 sx={{
-                  background: location.pathname == item.path ? "#f4f4f4" : null,
+                  background:
+                    location.pathname === item.path ? "#f4f4f4" : null,
                 }}
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>
